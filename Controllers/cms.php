@@ -9,9 +9,10 @@ function _executeAndClose($statement) {
 
 function CreatePage($pageCreator, $pageContent) {
     $db = DBConnection();
-    $query = "INSERT INTO pages (creator, content) VALUES (:page_creator, :page_content)";
+    $query = "INSERT INTO pages (creator, pageName, content) VALUES (:page_creator, :page_name, :page_content)";
     $statement = $db->prepare($query); // encapsulate the sql statement
-    $statement->bindValue(':page_creator', $pageCreator);
+    $statement->bindValue(':page_creator', $_SESSION["displayName"]);
+    $statement->bindValue(':page_name', $pageName);
     $statement->bindValue(':page_content', $pageContent);
     _executeAndClose($statement);
 }

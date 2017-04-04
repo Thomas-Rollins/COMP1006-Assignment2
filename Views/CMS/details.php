@@ -29,10 +29,10 @@ if($pageID == 0) {
                 <div class="form-group">
                     <label for="NameTextField">Page Name</label>
                     <input type="text" class="form-control" id="NameTextField"  name="NameTextField"
-                           placeholder="page Name" required  value="<?php echo $page['creator']; ?>">
+                           placeholder="page Name" required  value="<?php echo $page['pageName']; ?>">
                 </div>
                 <div class="form-group">
-                    <label for="CostTextField">Page Cost</label>
+                    <label for="CostTextField">Page Content</label>
                     <input type="text" class="form-control" id="CostTextField" name="CostTextField"
                            placeholder="Page Cost" required  value="<?php echo $page['content']; ?>">
                 </div>

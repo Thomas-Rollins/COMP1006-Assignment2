@@ -22,6 +22,7 @@ $pages = ReadPages();
                 <tr>
                     <th>ID</th>
                     <th>Creator</th>
+                    <th>Page Name</th>
                     <th>Content</th>
                     <th></th>
                     <th></th>
@@ -30,6 +31,7 @@ $pages = ReadPages();
                         <tr>
                             <td><?php echo $pages['id'] ?></td>
                             <td><?php echo $pages['creator'] ?></td>
+                            <td><?php echo $pages['pageName'] ?></td>
                             <td><?php echo $pages['content'] ?></td>
                             <!-- This line sends the gameID to the game_details page -->
 
