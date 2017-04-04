@@ -7,7 +7,8 @@ include_once('Config/database.php');
 include_once('Controllers/cms.php');
 
 $isAddition = filter_input(INPUT_POST, "isAddition");
-$pageCreator = filter_input(INPUT_POST, "NameTextField"); //$_POST["NameTextField"];
+$pageCreator = $_SESSION["displayName"];
+$pageName = filter_input(INPUT_POST, "NameTextField"); //$_POST["NameTextField"];
 $pageContent = filter_input(INPUT_POST, "CostTextField"); //$_POST["CostTextField"];
 
 if($isAddition == "1") {
@@ -15,7 +16,7 @@ if($isAddition == "1") {
 }
 else {
  $pageID = filter_input(INPUT_POST, "IDTextField"); // $_POST["IDTextField"];
- UpdatePage($pageID, $pageCreator, $pageContent);
+ UpdatePage($pageID, $pageCreator, $pageName, $pageContent);
 }
 
 // redirect to index page

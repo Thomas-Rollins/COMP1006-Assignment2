@@ -27,12 +27,13 @@ function ReadPages() {
     return $pages;
 }
 
-function UpdatePage($pageID, $pageCreator, $pageContent) {
+function UpdatePage($pageID, $pageCreator, $pageName, $pageContent) {
     $db = DBConnection();
-    $query = "UPDATE pages SET creator = :page_creator, content = :page_content WHERE id = :page_id "; // SQL statement
+    $query = "UPDATE pages SET creator = :page_creator, pageName = :page_name, content = :page_content WHERE id = :page_id "; // SQL statement
     $statement = $db->prepare($query); // encapsulate the sql statement
     $statement->bindValue(':page_id', $pageID);
     $statement->bindValue(':page_creator', $pageCreator);
+    $statement->bindvalue(':page_name', $pageName)
     $statement->bindValue(':page_content', $pageContent);
     _executeAndClose($statement);
 }
