@@ -14,8 +14,8 @@ function DBConnection() {
     // exception handling - use a try / catch
     try {
       $dsn = 'mysql:host=us-cdbr-azure-northcentral-b.cloudapp.net;dbname=comp1006_assignment1';
-      $userName = 'b9e8f2c430a4ad';
-      $password = 'b54eca3a';
+      $Username = 'b9e8f2c430a4ad';
+      $Password = 'b54eca3a';
         // instantiates a new pdo - an db object
         return new PDO($dsn, $Username, $Password);
     }
