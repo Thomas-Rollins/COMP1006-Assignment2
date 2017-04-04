@@ -45,7 +45,7 @@ else {
             $title = "Update page";
             $templateString = 'Views/CMS/update.php';
             break;
-        case "pageDelete":
+        case "PageDelete":
             $title = "Delete page";
             $templateString = 'Views/CMS/delete.php';
             break;
