@@ -33,7 +33,7 @@ function UpdatePage($pageID, $pageCreator, $pageName, $pageContent) {
     $statement = $db->prepare($query); // encapsulate the sql statement
     $statement->bindValue(':page_id', $pageID);
     $statement->bindValue(':page_creator', $pageCreator);
-    $statement->bindvalue(':page_name', $pageName)
+    $statement->bindvalue(':page_name', $pageName);
     $statement->bindValue(':page_content', $pageContent);
     _executeAndClose($statement);
 }
