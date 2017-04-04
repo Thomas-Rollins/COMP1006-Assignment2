@@ -1,8 +1,10 @@
 <div class="container">
     <div class="row">
+      <figure>
+          <img src="Content/images/Custom-CMS-Development.jpg" alt="CMS" />
+        </figure>
         <div class="col-md-offset-3 col-md-6">
             <h1>Dashboard</h1>
-
             <ul>
                 <li><a href="index.php">Dashboard</a></li>
                 <li><a href="index.php?pageId=About">About Us</a></li>

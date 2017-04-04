@@ -1,10 +1,10 @@
 {
   "name": "COMP1006-W2017-Lesson8",
-  "homepage": "https://github.com/GeorgianCollege/COMP1006-W2017-Lesson6",
+  "homepage": "http://comp1006-assignment-2.azurewebsites.net/",
   "authors": [
-    "Tom Tsiliopoulos <tsiliopoulos@hotmail.com>"
+    "Thomas Rollins <200344886@student.georgianc.on.ca"
   ],
-  "description": "PHP with MySQL",
+  "description": "COMP 1006 Assignment 2",
   "main": "",
   "keywords": [
     "PHP",

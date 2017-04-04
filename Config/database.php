@@ -5,19 +5,17 @@ if(session_status() == PHP_SESSION_NONE) {
     session_start();
 }
 
-// cleardb access
-//$dsn = 'mysql:host=ca-cdbr-azure-central-a.cloudapp.net;dbname=videogamesdb';
-//$Username = 'b6ee96bd470785';
-//$Password = 'dc381279';
+//Localhost for testing
+// $dsn = 'mysql:host=localhost:3307;dbname=comp1006_assignment2';
+// $Username = 'thomas';
+// $Password = '12345';
 
 function DBConnection() {
     // exception handling - use a try / catch
     try {
-
-        //local db access
-        $dsn = 'mysql:host=localhost:3307;dbname=comp1006_assignment2';
-        $Username = 'thomas';
-        $Password = '12345';
+      $dsn = 'mysql:host=us-cdbr-azure-northcentral-b.cloudapp.net;dbname=comp1006_assignment1';
+      $userName = 'b9e8f2c430a4ad';
+      $password = 'b54eca3a';
         // instantiates a new pdo - an db object
         return new PDO($dsn, $Username, $Password);
     }
