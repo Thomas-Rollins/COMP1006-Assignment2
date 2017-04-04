@@ -12,7 +12,7 @@ $pageName = filter_input(INPUT_POST, "NameTextField"); //$_POST["NameTextField"]
 $pageContent = filter_input(INPUT_POST, "CostTextField"); //$_POST["CostTextField"];
 
 if($isAddition == "1") {
- Createpage($pageCreator, $pageContent);
+ Createpage($pageCreator, $pageName, $pageContent);
 }
 else {
  $pageID = filter_input(INPUT_POST, "IDTextField"); // $_POST["IDTextField"];

@@ -7,7 +7,7 @@ function _executeAndClose($statement) {
 }
 
 
-function CreatePage($pageCreator, $pageContent) {
+function CreatePage($pageCreator, $pageName, $pageContent) {
     $db = DBConnection();
     $query = "INSERT INTO pages (creator, pageName, content) VALUES (:page_creator, :page_name, :page_content)";
     $statement = $db->prepare($query); // encapsulate the sql statement
