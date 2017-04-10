@@ -19,31 +19,29 @@ if($pageID == 0) {
 <div class="container">
     <div class="row">
         <div class="col-md-offset-3 col-md-6">
-            <h1>Page Details</h1>
-            <form action="index.php?pageId=PageUpdate" method="post">
-                <div class="form-group">
-                    <label for="IDTextField" hidden>Page ID</label>
-                    <input type="hidden" class="form-control" id="IDTextField" name="IDTextField"
+          <h1>Page Details</h1>
+          <form action="index.php?pageId=PageUpdate" id="pageForm" method="post">
+            <div class="form-group">
+              <label for="IDTextField" hidden>Page ID</label>
+              <input type="hidden" class="form-control" id="IDTextField" name="IDTextField"
                            placeholder="Page ID" value="<?php echo $page['id']; ?>">
-                </div>
-                <div class="form-group">
-                    <label for="NameTextField">Page Name</label>
-                    <input type="text" class="form-control" id="NameTextField"  name="NameTextField"
+            </div>
+            <div class="form-group">
+              <label for="NameTextField">Page Title</label>
+              <input type="text" class="form-control" id="NameTextField"  name="NameTextField"
                            placeholder="page Name" required  value="<?php echo $page['pageName']; ?>">
-                </div>
-                <div class="form-group">
-                    <label for="CostTextField">Page Content</label>
-                    <input type="text" class="form-control" id="CostTextField" name="CostTextField"
-                           placeholder="Page Cost" required  value="<?php echo $page['content']; ?>">
-                </div>
-                    <input type="hidden" name="isAddition" value="<?php echo $isAddition; ?>">
-                <button type="submit" id="SubmitButton" class="btn btn-primary">Submit</button>
-                <a href="index.php?pageId=CMSList">
-                    <input type="button" class="btn btn-warning" value="Cancel"/>
-                </a>
-
-            </form>
+            </div>
+            <div class="form-group">
+              <label for="contentTextArea">Page Content</label>
+              <textarea class="form-control input-lg" id="contentTextArea" name="contentTextArea" form="pageForm"><?php echo $page['content']; ?></textarea>
+            </div>
+            <input type="hidden" name="isAddition" value="<?php echo $isAddition; ?>">
+            <button type="submit" id="SubmitButton" class="btn btn-primary">Submit</button>
+            <a href="index.php?pageId=CMSList">
+              <input type="button" class="btn btn-warning" value="Cancel"/>
+            </a>
+          </form>
 
         </div>
+      </div>
     </div>
-</div>

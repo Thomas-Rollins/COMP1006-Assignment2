@@ -8,8 +8,8 @@ include_once('Controllers/cms.php');
 
 $isAddition = filter_input(INPUT_POST, "isAddition");
 $pageCreator = $_SESSION["displayName"];
-$pageName = filter_input(INPUT_POST, "NameTextField"); //$_POST["NameTextField"];
-$pageContent = filter_input(INPUT_POST, "CostTextField"); //$_POST["CostTextField"];
+$pageName = filter_input(INPUT_POST, "NameTextField");
+$pageContent = filter_input(INPUT_POST, "contentTextArea");
 
 if($isAddition == "1") {
  Createpage($pageCreator, $pageName, $pageContent);
