@@ -1,3 +1,8 @@
+<!-- FILE: index.php
+AUTHOR: Thomas Rollins
+STUDENT ID: 200344886
+SITE: CMS - COMP1006 Assignment 2
+FILE DESC: cite navigation controller -->
 <?php
 
 if(!isset($_GET["pageId"])) {
@@ -41,6 +46,10 @@ else {
             }
             $templateString = "Views/CMS/details.php";
             break;
+        case "CMSView":
+          $title = "";
+          $templateString = 'Views/content/page-template.php';
+          break;
         case "PageUpdate":
             $title = "Update page";
             $templateString = 'Views/CMS/update.php';

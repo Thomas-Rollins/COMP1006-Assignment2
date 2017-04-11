@@ -1,3 +1,8 @@
+<!-- FILE: email.php
+AUTHOR: Thomas Rollins
+STUDENT ID: 200344886
+SITE: CMS - COMP1006 Assignment 2
+FILE DESC: email controller file - contains SendGrid app settings -->
 <?php
 function ProcessEmail($fullName, $emailAddress, $contactNumber, $message) {
     // If you are using Composer (recommended)
@@ -6,7 +11,7 @@ function ProcessEmail($fullName, $emailAddress, $contactNumber, $message) {
 // require("path/to/sendgrid-php/sendgrid-php.php");
     $from = new SendGrid\Email(null, $emailAddress);
     $subject = "Email from Contact Form";
-    $to = new SendGrid\Email(null, "200344886@student.georgianc.on.ca");
+    $to = new SendGrid\Email(null, "tom.tsiliopoulos@gmail.com");
     $message .= "\n \nFull Name:" . $fullName . "\nContact Number: " . $contactNumber;
     $content = new SendGrid\Content("text/plain", $message);
     $mail = new SendGrid\Mail($from, $subject, $to, $content);

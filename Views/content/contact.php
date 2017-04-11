@@ -1,3 +1,8 @@
+<!-- FILE: contact.php
+AUTHOR: Thomas Rollins
+STUDENT ID: 200344886
+SITE: CMS - COMP1006 Assignment 2
+FILE DESC:  Display page for contacting via Email -->
 <?php
     $messages = "";
     if(isset($_POST["fullname"])) {

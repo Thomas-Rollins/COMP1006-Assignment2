@@ -1,3 +1,8 @@
+<!-- FILE: details.php
+AUTHOR: Thomas Rollins
+STUDENT ID: 200344886
+SITE: CMS - COMP1006 Assignment 2
+FILE DESC: CMS page creation/editting page -->
 <?php
 include_once('Controllers/users.php');
 CheckIfAuthenticated();

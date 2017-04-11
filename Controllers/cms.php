@@ -1,3 +1,8 @@
+<!-- FILE: cms.php
+AUTHOR: Thomas Rollins
+STUDENT ID: 200344886
+SITE: CMS - COMP1006 Assignment 2
+FILE DESC: CMS Controller file - contains relveant functions -->
 <?php
 include_once("Config/database.php");
 

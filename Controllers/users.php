@@ -1,3 +1,8 @@
+<!-- FILE: users.php
+AUTHOR: Thomas Rollins
+STUDENT ID: 200344886
+SITE: CMS - COMP1006 Assignment 2
+FILE DESC: contains user authentication related functions -->
 <?php
 include_once("Config/database.php");
 
@@ -14,7 +19,7 @@ include_once("Config/database.php");
         $messages = "";
         try{
             $db = DBConnection();
-            $query = "SELECT password, displayName FROM users 
+            $query = "SELECT password, displayName FROM users
                   WHERE username = :username"; // SQL statement
             $statement = $db->prepare($query); // encapsulate the sql statement
             $statement->bindValue(':username', $username);
@@ -48,7 +53,7 @@ include_once("Config/database.php");
         $isUserNameUnique = false;
         try {
             $db = DBConnection();
-            $query = "SELECT * FROM users 
+            $query = "SELECT * FROM users
                   WHERE username = :username";
             $statement = $db->prepare($query); // encapsulate the sql statement
             $statement->bindValue(':username', $username);

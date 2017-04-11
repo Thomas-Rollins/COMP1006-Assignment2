@@ -1,3 +1,8 @@
+<!-- FILE: delete.php
+AUTHOR: Thomas Rollins
+STUDENT ID: 200344886
+SITE: CMS - COMP1006 Assignment 2
+FILE DESC: removes an entry from the CMS table -->
 <?php
 include_once('Controllers/users.php');
 CheckIfAuthenticated();

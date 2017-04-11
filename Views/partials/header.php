@@ -1,3 +1,8 @@
+<!-- FILE: header.php
+AUTHOR: Thomas Rollins
+STUDENT ID: 200344886
+SITE: CMS - COMP1006 Assignment 2
+FILE DESC: Header Partial File -->
 <!DOCTYPE html>
 <html lang="en">
 <head>

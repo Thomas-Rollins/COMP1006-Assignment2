@@ -1,3 +1,8 @@
+<!-- FILE: login.php
+AUTHOR: Thomas Rollins
+STUDENT ID: 200344886
+SITE: CMS - COMP1006 Assignment 2
+FILE DESC: login page -->
 <?php
 
 if(isset($_POST["username"])){

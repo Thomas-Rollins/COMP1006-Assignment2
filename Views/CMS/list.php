@@ -1,3 +1,8 @@
+<!-- FILE: list.php
+AUTHOR: Thomas Rollins
+STUDENT ID: 200344886
+SITE: CMS - COMP1006 Assignment 2
+FILE DESC: displays all CMS page entries -->
 <?php
 
 include_once('Controllers/users.php');
@@ -26,6 +31,7 @@ $pages = ReadPages();
                     <th>Content</th>
                     <th></th>
                     <th></th>
+                    <th></th>
                 </tr>
                     <?php foreach($pages as $pages) : ?>
                         <tr>
@@ -33,7 +39,9 @@ $pages = ReadPages();
                             <td><?php echo $pages['creator'] ?></td>
                             <td><?php echo $pages['pageName'] ?></td>
                             <td><?php echo $pages['content'] ?></td>
-                            <!-- This line sends the gameID to the game_details page -->
+
+                            <td><a class="btn btn-info" href="index.php?pageId=CMSView&pageID=<?php echo $pages['id'] ?>">
+                              <i class="fa fa-eye"></i>View</a></td>
 
                             <td><a class="btn btn-primary" href="index.php?pageId=CMSDetails&CMSID=<?php echo $pages['id'] ?>">
                                     <i class="fa fa-pencil-square-o"></i> Edit</a></td>
