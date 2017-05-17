@@ -16,7 +16,7 @@ function ProcessEmail($fullName, $emailAddress, $contactNumber, $message) {
     $content = new SendGrid\Content("text/plain", $message);
     $mail = new SendGrid\Mail($from, $subject, $to, $content);
     //$apiKey = $_ENV["SENDGRID_API"];
-    $sg = new \SendGrid("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");
+    $sg = new \SendGrid("<-- API KEY REMOVED -->");
     //$sg = new \SendGrid($apiKey);
     // send the mail
     $response = $sg->client->mail()->send()->post($mail);
